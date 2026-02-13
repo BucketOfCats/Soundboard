@@ -5,7 +5,7 @@ import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 assets_path = os.path.join(script_dir, "assets")
 sounds_path = os.path.join(assets_path, "sounds")
-config_path = os.path.join(assets_path, "config")
+config_path = os.path.join(assets_path, "config.json")
 
 # Load config
 with open(config_path, "r") as f:
