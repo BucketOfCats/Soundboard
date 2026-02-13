@@ -1,0 +1,16 @@
+{
+    "combo_keys": [ "alt_l", "alt_r", "alt" ],
+    "echo_keys": [ "caps_lock", "insert" ],
+    "sounds": [
+        {
+            "key_combo": ["1", "1"],
+            "volume": 1,
+            "path": "hi.ogg"
+        },
+        {
+            "key_combo": ["1", "2"],
+            "volume": 1,
+            "path": "bye.ogg"
+        }
+    ]
+}
