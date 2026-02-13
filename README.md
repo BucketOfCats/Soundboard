@@ -22,8 +22,10 @@ python src/main.py
 ### 3. Controls
 * **Play a sound:**
   Hold the **combo key** and press the the combination of keys mapped to your sound
+  ###### (Holding it suppresses some keybinds system-wide)
 
 * **Repeat the last combo (Echo):**
-  Hold the **combo key + echo key** (if last combo wasn't mapped to a sound it won't play anything)
+  Hold the **combo key + echo key**
+  ###### (If the last combo wasn't mapped to a sound it won't play anything)
 
 ###### You need [vb-audio](https://vb-audio.com/) if you want to actually play it through your microphone.
