@@ -25,3 +25,5 @@ python src/main.py
 
 * **Repeat the last combo (Echo):**
   Hold the **combo key + echo key** (if last combo wasn't mapped to a sound it won't play anything)
+
+###### You need [vb-audio](https://vb-audio.com/) if you want to actually play it through your microphone.
