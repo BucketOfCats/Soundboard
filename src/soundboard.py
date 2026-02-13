@@ -42,7 +42,6 @@ class Soundboard:
     ECHO_KEYS: list[Key]        # Keys that replay the last sound played
 
     combo_active: bool          # Whether a combo is currently active
-    echo_flag: bool             # Whether user echoed the sound
 
     key_combo_last: KeyCombo    # Last completed key combo
     key_combo: KeyCombo         # Currently building key combo
@@ -58,7 +57,6 @@ class Soundboard:
             # If user can perform combo
             if self.combo_active:
                 if key in self.ECHO_KEYS:
-                    self.echo_flag = True
                     self.key_combo.clear()
                     self.play_sound(self.key_combo_last)
                 # If key isn't a combo key or an echo key
@@ -75,16 +73,13 @@ class Soundboard:
             # If key released is a combo key
             if key in self.COMBO_KEYS:
                 # If user didn't echo or combo isn't empty
-                if not (self.echo_flag and len(self.key_combo) == 0):
+                if len(self.key_combo) != 0:
                     # Get final combo and play sound
                     final_combo = self.finish_combo()
                     self.play_sound(final_combo)
 
                 # Disable combo flag
                 self.combo_active = False
-
-                # Disable echo flag
-                self.echo_flag = False
 
         # Determines whether a key event should be suppressed
         # (i.e., blocked from reaching other applications)
@@ -115,7 +110,6 @@ class Soundboard:
         self.ECHO_KEYS = []
 
         self.combo_active = False
-        self.echo_flag = False
 
         self.key_combo_last = []
         self.key_combo = []
